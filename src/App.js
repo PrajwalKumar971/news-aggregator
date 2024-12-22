@@ -1,14 +1,13 @@
-import './App.css';
-import { BrowserRouter as Router } from "react-router-dom";
-import AppRoutes from './routes';
+import { NavBar, ScrollToTop } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <div className="app-container">
-        <AppRoutes />
-      </div>
-    </Router>
+    <div className="position-relative" style={{ background: "#3c4043" }}>
+      <NavBar />
+      <Outlet />
+      <ScrollToTop />
+    </div>
   );
 }
 
